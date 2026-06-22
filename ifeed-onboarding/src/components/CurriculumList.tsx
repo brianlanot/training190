@@ -1,9 +1,10 @@
-// src/components/CurriculumList.tsx
 "use client";
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp, PlayCircle, CheckCircle2, Lock } from "lucide-react";
 import { curriculumData } from "./curriculumData";
+import Link from "next/link";
+
 
 export default function CurriculumList() {
   const [expandedModules, setExpandedModules] = useState<number[]>([2]);
@@ -26,10 +27,10 @@ export default function CurriculumList() {
             key={item.id}
             className={`bg-white border border-gray-200 rounded-xl overflow-hidden shadow-xs relative transition-all duration-200`}
           >
-            {/* Dark Green Left Accent Border */}
+            {/*Dark Green Left Accent Border*/}
             <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#1E5631]" />
 
-            {/* Header Accordion Row */}
+            {/*Header Accordion Row*/}
             <div 
               onClick={() => toggleModule(item.id)}
               className={`p-5 pl-7 flex items-start justify-between gap-4 cursor-pointer select-none transition-colors ${
@@ -37,7 +38,7 @@ export default function CurriculumList() {
               }`}
             >
               <div className="flex gap-4">
-                {/* Module Icon Container */}
+                {/*Module Icon Container*/}
                 <div className="mt-0.5">
                   
                     <div className="w-6 h-6 rounded-md bg-[#D2E4D6] flex items-center justify-center text-xs font-bold text-[#1E5631]">
@@ -46,7 +47,7 @@ export default function CurriculumList() {
                   
                 </div>
 
-                {/* Module Details */}
+                {/*Module Details*/}
                 <div className="space-y-1">
                   <h3 className="font-bold text-gray-800 text-base">
                   {item.title}
@@ -61,7 +62,7 @@ export default function CurriculumList() {
                 </div>
               </div>
 
-              {/* Status & Toggle Controls */}
+              {/*Status & Toggle Controls*/}
               <div className="flex items-center gap-4 pl-4" onClick={(e) => e.stopPropagation()}>
 
                 <button 
@@ -78,14 +79,14 @@ export default function CurriculumList() {
               </div>
             </div>
 
-            {/* Expanded Content Panel */}
+            {/*Expanded Content Panel*/}
             <div 
               className={`transition-all duration-300 ease-in-out border-t border-gray-100 overflow-hidden ${
                 isExpanded ? "max-h-[600px] opacity-100 bg-[#F9ECE7]/40 p-5 pl-7 pr-5" : "max-h-0 opacity-0 pointer-events-none"
               }`}
             >
               <div className="space-y-4">
-                {/* Lessons Stack List */}
+                {/*Lessons Stack List*/}
                 <div className="space-y-1">
                   {item.lessons.map((lesson, idx) => (
                     <div 
@@ -109,11 +110,14 @@ export default function CurriculumList() {
                   ))}
                 </div>
 
-                {/* Big Action Button */}
+                {/*Start Module Button*/}
                 <div className="pt-2">
-                  <button className="w-full bg-[#A36A3B] hover:bg-[#8F5B30] text-white font-bold text-sm py-3 px-4 rounded-xl transition-colors shadow-xs tracking-wide">
+                  <Link 
+                    href={`/modules`} 
+                    className="block w-full bg-[#A36A3B] hover:bg-[#8F5B30] text-white text-center font-bold text-sm py-3 px-4 rounded-xl transition-colors shadow-xs tracking-wide"
+                  >
                     Start Module
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
