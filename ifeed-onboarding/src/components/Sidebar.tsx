@@ -18,10 +18,10 @@ import { curriculumData } from "./curriculumData";
 
 const modules = [
   { label: "Introduction", icon: GraduationCap, href: "/modules/introduction", slug: "introduction" },
-  { label: "Managing Ingredients", icon: Layers, href: "/modules/ingredients", slug: "ingredients" },
-  { label: "Learning Nutrients", icon: PawPrint, href: "/modules/nutrients", slug: "nutrients" },
-  { label: "Feed Formulation", icon: FlaskConical, href: "/modules/formulation", slug: "formulation" },
-  { label: "Advanced Features", icon: Award, href: "/modules/advanced", slug: "advanced" },
+  { label: "Managing Ingredients", icon: Layers, href: "/modules/ingredients", slug: "managing-ingredients" },
+  { label: "Learning Nutrients", icon: PawPrint, href: "/modules/nutrients", slug: "learning-nutrients" },
+  { label: "Feed Formulation", icon: FlaskConical, href: "/modules/formulation", slug: "feed-formulation" },
+  { label: "Advanced Features", icon: Award, href: "/modules/advanced", slug: "advanced-features" },
 ];
 
 export default function Sidebar() {

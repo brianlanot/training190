@@ -52,7 +52,7 @@ export default function CurriculumList() {
                   <h3 className="font-bold text-gray-800 text-base">
                   {item.title}
                   </h3>
-                  <div className="flex flex-wrap gap-x-2 gap-y-0.5 text-xs font-medium text-gray-500">
+                  <div className="flex flex-wrap gap-x-2 gap-y-0.5 text-sm font-small text-gray-500">
                     <span>{item.lessonsCount} lessons</span>
                     <span>•</span>
                     <span>{item.duration}</span>
@@ -91,15 +91,14 @@ export default function CurriculumList() {
                   {item.lessons.map((lesson, idx) => (
                     <div 
                       key={lesson.id} 
-                      className="flex items-center justify-between bg-[#F1E8E4]/40 hover:bg-[#F1E8E4]/80 px-4 py-3 rounded-lg transition-colors"
+                      className="flex items-center justify-between bg-[#F1E8E4]/40 px-4 py-3 rounded-lg transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         
                           <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                      
                        
-                        
-                       
-                        <span className="text-xs font-bold text-gray-700">
+                        <span className="text-sm font-bold text-gray-700">
                           Lesson {idx + 1}: {lesson.title}
                         </span>
                       </div>
