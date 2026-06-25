@@ -126,11 +126,11 @@ export default function OnboardingPage() {
       </div>
 
       {/* --- Footer --- */}
-      <footer className="bg-white/90 backdrop-blur-sm py-6 text-center border-t border-gray-200">
-        <p className="text-xs font-bold text-gray-800">
+      <footer className="bg-[#1E5631] backdrop-blur-sm py-6 text-center border-t border-gray-200">
+        <p className="text-xs font-bold text-gray-900">
           © 2026 - iFeed V2 Onboarding
         </p>
-        <p className="text-xs text-gray-500 mt-1">
+        <p className="text-xs text-[#fceeed] mt-1">
           Empowering Carabao Farmers with Feed Formulation
         </p>
       </footer>
