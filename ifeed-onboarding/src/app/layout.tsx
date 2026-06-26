@@ -29,7 +29,7 @@ export default function RootLayout({
           {!hideSidebar && (
             isResourcesPage ? <ResourcesSidebar /> : <Sidebar />
           )}
-          <main className="flex-1 overflow-y-auto p-8 bg-[url('/bg-pattern.png')] bg-cover bg-no-repeat">
+          <main className={hideSidebar ? "flex-1 overflow-y-auto" : "flex-1 overflow-y-auto p-8 bg-[url('/bg-pattern.png')] bg-cover bg-no-repeat"}>
             {children}
           </main>
         </div>
